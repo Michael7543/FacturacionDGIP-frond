@@ -193,7 +193,7 @@
 <div class="container card scalein animation-duration-1000">
   <h2>BANCOS</h2>
   <p-table class="table__content shadow-6 m-3 surface-card" #dtc2 [value]="banco" dataKey="id" [rows]="4"
-    [showCurrentPageReport]="true" [rowsPerPageOptions]="[2, 5, 10, 25, 50]" [paginator]="true"
+    [showCurrentPageReport]="true" [rowsPerPageOptions]="[2, 5, 10, 25, 50]" [paginator]="true" id="season-tble"
     currentPageReportTemplate="Datos {first} a {last} de {totalRecords} registros"
    [globalFilterFields]="[
    'idBancos',
@@ -254,7 +254,9 @@
     </ng-template>
   </p-table>
 </div> 
+<br><br>
 
+<button (click)="exportToExcel()" style="margin-left: 10%;">Exportar en Excel</button>
 
 
 
